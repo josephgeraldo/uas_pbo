@@ -15,7 +15,5 @@ import java.sql.SQLException;
  */
 
 public class RegistrasiController {
-    public String InputController(int userId, String password, String userName, String userEmail, String userGender, String userCategory, String userFollowers){
-        
-    }
+    
 }
