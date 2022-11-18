@@ -3,16 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package uas_prakpbo;
+package Model;
 
 /**
  *
  * @author 1121054_JosephGeraldo
  */
 
-public class UAS_PrakPBO {
-    
-    public static void main(String[] args) {
-        
-    } 
+public class CategoryUser {
+    private int categoryId;
+    private String categoryName;
 }

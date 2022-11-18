@@ -9,6 +9,7 @@ package Controller;
  *
  * @author hanschristian
  */
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.TimeZone;
@@ -18,7 +19,7 @@ public class DatabaseHandler {
 
     public Connection con;
     private String driver = "com.mysql.cj.jdbc.Driver";
-    private String url = "jdbc:mysql://localhost/modul7_prakpbo";
+    private String url = "jdbc:mysql://localhost/db_uas_1121054";
 //    private String url = "jdbc:mysql://localhost/db_test?serverTimezone=" + TimeZone.getDefault().getID();
     private String username = "root";
     private String password = "";
