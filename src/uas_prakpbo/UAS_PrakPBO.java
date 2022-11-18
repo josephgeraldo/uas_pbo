@@ -7,7 +7,7 @@ package uas_prakpbo;
 
 /**
  *
- * @author user
+ * @author 1121054_JosephGeraldo
  */
 
 public class UAS_PrakPBO {
