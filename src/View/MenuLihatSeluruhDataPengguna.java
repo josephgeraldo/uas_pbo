@@ -17,6 +17,8 @@ import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 
 /**
@@ -29,48 +31,33 @@ public class MenuLihatSeluruhDataPengguna {
     public static void main(String[] args) {
         new MenuLihatSeluruhDataPengguna();
     } 
+    JFrame f;
+    JTable j;
     public MenuLihatSeluruhDataPengguna(){
-        RegistrasiController regis = new RegistrasiController();
-        
-        JFrame frame = new JFrame("Menu Lihat Data");
-        frame.setSize(600, 450);
-        frame.setLocationRelativeTo(null);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        Font font1 = new Font("Serif", Font.PLAIN, 15);
-        
-        JLabel menuLabel = new JLabel("Menu Lihat Data");
-        menuLabel.setFont(new Font("Serif", Font.BOLD, 30));
-        menuLabel.setBounds(170, 20, 300, 50);
-        
-        JLabel usernameLabel = new JLabel("Username");
-        usernameLabel.setBounds(50, 70, 90, 40);
-        usernameLabel.setFont(font1);
-        
-        JLabel emailLabel = new JLabel("Email");
-        emailLabel.setBounds(50, 100, 90, 40);
-        emailLabel.setFont(font1);
-        
-        JLabel jkLabel = new JLabel("Jenis Kelamin");
-        jkLabel.setBounds(50, 130, 90, 40);
-        jkLabel.setFont(font1);
-        
-        JLabel kategoriLabel = new JLabel("Kategori");
-        kategoriLabel.setBounds(50, 160, 90, 40);
-        kategoriLabel.setFont(font1);
-        
-        JLabel passwordLabel = new JLabel("Password");
-        passwordLabel.setBounds(50, 245, 90, 40);
-        passwordLabel.setFont(font1);
-        
-        
-        frame.add(passwordLabel);
-        frame.add(kategoriLabel);
-        frame.add(jkLabel);
-        frame.add(emailLabel);
-        frame.add(usernameLabel);
-        frame.add(menuLabel);
-        frame.setLayout(null);
-        frame.setVisible(true);
+        f = new JFrame();
+        f.setTitle("Table");
+        String[][] data = {
+            {"1", "Asep", "Pria", "asep@gmail.com", "Private Account", "1000"},
+        };
+        String[] columnNames = {"userId", "userName", "userGender", "userEmail", "userCategory", "userFollowers"};
+        j = new JTable(data, columnNames);
+        j.setBounds(30, 40, 200, 300);
+        JScrollPane sp = new JScrollPane(j);
+        f.add(sp);
+        f.setSize(1000, 1000);
+        f.setVisible(true);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JButton back = new JButton("Back");
+        back.setBounds(150, 150, 50, 50);
+        back.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        back.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                f.dispose();
+                new MenuUtama();
+            }
+        });
+        f.add(back);
     }
 
     MenuLihatSeluruhDataPengguna(SingletonUser instance) {
