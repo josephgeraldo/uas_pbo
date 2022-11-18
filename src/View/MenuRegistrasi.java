@@ -13,6 +13,7 @@ import java.awt.event.ActionListener;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
@@ -88,15 +89,10 @@ public class MenuRegistrasi {
         kategoriLabel.setBounds(50, 160, 90, 40);
         kategoriLabel.setFont(font1);
         
-        JCheckBox yt = new JCheckBox("PrivateAccount");
-        yt.setBounds(180, 165, 240, 30);
-        yt.setFont(font1);
-        JCheckBox inf = new JCheckBox("CreatorAccount");
-        inf.setBounds(180, 190, 240, 30);
-        inf.setFont(font1);
-        JCheckBox seleb = new JCheckBox("BusinessAccount");
-        seleb.setBounds(180, 215, 240, 30);
-        seleb.setFont(font1);
+        String kategori[] = {"Private Account", "Creator Account", "Business Account"};
+        JComboBox cbKategori = new JComboBox(kategori);
+        cbKategori.setBounds(180, 160, 310, 30);
+        cbKategori.setFont(font1);
         
         JLabel passwordLabel = new JLabel("Password");
         passwordLabel.setBounds(50, 245, 90, 40);
@@ -113,16 +109,6 @@ public class MenuRegistrasi {
         registrasi.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent ae) {
-                String kategori = "";
-                if (yt.isSelected()) {
-                    kategori += yt.getText() + ", ";
-                }
-                if (inf.isSelected()) {
-                    kategori += inf.getText() + ", ";
-                }
-                if (seleb.isSelected()) {
-                    kategori += seleb.getText() + ", ";
-                }
                 frame.dispose();
                 //
             }
@@ -144,9 +130,7 @@ public class MenuRegistrasi {
         frame.add(back);
         frame.add(password);
         frame.add(passwordLabel);
-        frame.add(yt);
-        frame.add(inf);
-        frame.add(seleb);
+        frame.add(cbKategori);
         frame.add(kategoriLabel);
         frame.add(pria);
         frame.add(wanita);
