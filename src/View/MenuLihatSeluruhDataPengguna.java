@@ -46,44 +46,13 @@ public class MenuLihatSeluruhDataPengguna {
         usernameLabel.setBounds(50, 70, 90, 40);
         usernameLabel.setFont(font1);
         
-        JTextField username = new JTextField();
-        username.setBounds(180, 80, 300, 20);
-        username.setFont(font1);
-        
         JLabel emailLabel = new JLabel("Email");
         emailLabel.setBounds(50, 100, 90, 40);
         emailLabel.setFont(font1);
         
-        JTextField email = new JTextField();
-        email.setBounds(180, 110, 300, 20);
-        email.setFont(font1);
-        
         JLabel jkLabel = new JLabel("Jenis Kelamin");
         jkLabel.setBounds(50, 130, 90, 40);
         jkLabel.setFont(font1);
-        
-        JRadioButton pria = new JRadioButton("Pria");
-        JRadioButton wanita = new JRadioButton("Wanita");
-        ButtonGroup bg = new ButtonGroup();
-        bg.add(pria);
-        bg.add(wanita);
-        pria.setBounds(180, 135, 80, 30);
-        pria.setFont(font1);
-        wanita.setBounds(260, 135, 240, 30);
-        wanita.setFont(font1);
-        
-        pria.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                jk = pria.getText();
-            }
-        });
-        wanita.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                jk = wanita.getText();
-            }
-        });
         
         JLabel kategoriLabel = new JLabel("Kategori");
         kategoriLabel.setBounds(50, 160, 90, 40);
@@ -93,19 +62,11 @@ public class MenuLihatSeluruhDataPengguna {
         passwordLabel.setBounds(50, 245, 90, 40);
         passwordLabel.setFont(font1);
         
-        JTextField password = new JTextField();
-        password.setBounds(180, 255, 300, 20);
-        password.setFont(font1);
         
-        frame.add(password);
         frame.add(passwordLabel);
         frame.add(kategoriLabel);
-        frame.add(pria);
-        frame.add(wanita);
         frame.add(jkLabel);
         frame.add(emailLabel);
-        frame.add(email);
-        frame.add(username);
         frame.add(usernameLabel);
         frame.add(menuLabel);
         frame.setLayout(null);
