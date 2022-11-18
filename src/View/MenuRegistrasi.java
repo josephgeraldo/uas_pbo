@@ -5,6 +5,7 @@
  */
 package View;
 
+import Controller.RegistrasiController;
 import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -28,6 +29,8 @@ public class MenuRegistrasi {
         new MenuRegistrasi();
     } 
     public MenuRegistrasi(){
+        RegistrasiController regis = new RegistrasiController();
+        
         JFrame frame = new JFrame("Menu Registrasi");
         frame.setSize(600, 450);
         frame.setLocationRelativeTo(null);
@@ -120,7 +123,6 @@ public class MenuRegistrasi {
                 if (seleb.isSelected()) {
                     kategori += seleb.getText() + ", ";
                 }
-                String kondisi = 
                 frame.dispose();
                 //
             }

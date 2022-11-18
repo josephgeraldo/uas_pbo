@@ -15,7 +15,7 @@ import java.sql.SQLException;
  */
 
 public class RegistrasiController {
-    public String InputController(int userId, String password, String nama, String tempatLahir, String tglLahir, String jk, String goldar, String alamat, String rtrw, String kelurahan, String kecamatan, String agama, String statusKawin, String pekerjaan, String kewarganegaraan, String berlakuHingga, String foto, String ttd, String kotaPembuatan, String tglPembuatan){
+    public String InputController(int userId, String password, String userName, String userEmail, String userGender, String userCategory, String userFollowers){
         
     }
 }
