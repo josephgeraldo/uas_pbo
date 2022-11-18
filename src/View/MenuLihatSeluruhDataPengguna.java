@@ -32,13 +32,13 @@ public class MenuLihatSeluruhDataPengguna {
     public MenuLihatSeluruhDataPengguna(){
         RegistrasiController regis = new RegistrasiController();
         
-        JFrame frame = new JFrame("Menu Registrasi");
+        JFrame frame = new JFrame("Menu Lihat Data");
         frame.setSize(600, 450);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Font font1 = new Font("Serif", Font.PLAIN, 15);
         
-        JLabel menuLabel = new JLabel("Menu Registrasi");
+        JLabel menuLabel = new JLabel("Menu Lihat Data");
         menuLabel.setFont(new Font("Serif", Font.BOLD, 30));
         menuLabel.setBounds(170, 20, 300, 50);
         
@@ -89,16 +89,6 @@ public class MenuLihatSeluruhDataPengguna {
         kategoriLabel.setBounds(50, 160, 90, 40);
         kategoriLabel.setFont(font1);
         
-        JCheckBox yt = new JCheckBox("PrivateAccount");
-        yt.setBounds(180, 165, 240, 30);
-        yt.setFont(font1);
-        JCheckBox inf = new JCheckBox("CreatorAccount");
-        inf.setBounds(180, 190, 240, 30);
-        inf.setFont(font1);
-        JCheckBox seleb = new JCheckBox("BusinessAccount");
-        seleb.setBounds(180, 215, 240, 30);
-        seleb.setFont(font1);
-        
         JLabel passwordLabel = new JLabel("Password");
         passwordLabel.setBounds(50, 245, 90, 40);
         passwordLabel.setFont(font1);
@@ -107,47 +97,8 @@ public class MenuLihatSeluruhDataPengguna {
         password.setBounds(180, 255, 300, 20);
         password.setFont(font1);
         
-        JButton registrasi = new JButton("Registrasi");
-        registrasi.setBounds(120, 300, 150, 50);
-        registrasi.setFont(font1);
-        registrasi.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        registrasi.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                String kategori = "";
-                if (yt.isSelected()) {
-                    kategori += yt.getText() + ", ";
-                }
-                if (inf.isSelected()) {
-                    kategori += inf.getText() + ", ";
-                }
-                if (seleb.isSelected()) {
-                    kategori += seleb.getText() + ", ";
-                }
-                frame.dispose();
-                //
-            }
-        });
-        
-        JButton back = new JButton("Back");
-        back.setBounds(320, 300, 150, 50);
-        back.setFont(font1);
-        back.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        back.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                frame.dispose();
-                new MenuUtama();
-            }
-        });
-        
-        frame.add(registrasi);
-        frame.add(back);
         frame.add(password);
         frame.add(passwordLabel);
-        frame.add(yt);
-        frame.add(inf);
-        frame.add(seleb);
         frame.add(kategoriLabel);
         frame.add(pria);
         frame.add(wanita);

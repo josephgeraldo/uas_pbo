@@ -60,7 +60,7 @@ public class MenuLogin {
         login.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent ae) {
-                String kondisi = Controller.LoginController(userName.getText(), password.getText());
+                String kondisi = "";
                 JOptionPane.showMessageDialog(null, kondisi);
                 if (kondisi.equals("berhasil")) {
                     frame.dispose();
